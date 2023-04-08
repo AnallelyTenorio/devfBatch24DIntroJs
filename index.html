@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="paginaInicio" class="login">
+        <h1>Tu Banco</h1>
+        <label for="Usermane">Usuario</label><br>
+        <input id="inputName" type="text"><br><br>
+        <label for="password">Contraseña</label><br>
+        <input id="inputPassword" type="password"><br><br>
+        <button onclick="ingreso()">Ingresar</button><br>
+        <input type="checkbox" id="Remenber-me">
+        <label for="Remenber-me">Recuerdame</label>
+        <a href="#">Olvidaste tu contraseña?</a>
+    </div>
+
+    <div id="inicio" class="hidden">
+        <h2>Bienvenido a Tu Banco</h2>
+        <div class="botones">
+            <button onclick="muestraPantallaConsultaSaldo()">Consulta saldo</button>
+            <button onclick="muestraPantallaIngreso()">Ingresar monto</button>
+            <button onclick="muestraPantallaRetiro()">Retirar monto</button><br><br>
+            <button onclick="salir()">Salir</button>
+        </div>
+    </div>
+
+    <div id="saldo" class="hidden">
+        <h2>Tu saldo es:</h2><br>
+        <label id="mostrarSaldo" for="Saldo"></label><br>
+        <button onclick="menuPrincipal()">Menu Principal</button>
+        <button onclick="salir()">Salir</button>
+
+    </div>
+    <div id="ingreso" class="hidden">
+        <label for="Ingreso">Monto a ingresar</label><br>
+        <input id="montoIngresado" type="number"><br>
+        <button onclick="continuarIngreso()">Continuar</button>
+        <button onclick="menuPrincipal()">Menu Principal</button>
+    </div>
+    <div id="montoIngreso" class="hidden">
+        <h2>El monto ingresado es:</h2>
+        <label id="ingresado" for="ingreso"></label>
+        <h3>Saldo Total:</h3>
+        <label id="ingresoMonto" for="ingreso"></label><br>
+        <button onclick="salir()">Salir</button>
+    </div>
+
+    <div id="retiro" class="hidden">
+        <label for="Retiro">Monto a retirado</label><br>
+        <input id="montoRetirado" type="number"><br>
+        <button onclick="continuarRetiro()">Continuar</button>
+        <button onclick="menuPrincipal()">Menu Principal</button>
+    </div>
+    <div id="montoRetiro" class="hidden">
+        <h2>El monto retirado es:</h2>
+        <label id="retirado" for="retiro"></label>
+        <h3>Saldo total:</h3>
+        <label id="retiroMonto" for="retiro"></label><br>
+        <button onclick="salir()">Salir</button>
+    </div>
+
+
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
